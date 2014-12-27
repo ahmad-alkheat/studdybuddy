@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
 <%= yield %>
+<%= render 'devise/links' unless @disable_logout %>
+
 
 </body>
 </html>

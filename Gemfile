@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,7 +23,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'arel', '6.0.0.beta2'
 gem 'simple_form', '~> 3.1.0'
 gem 'devise'
+gem "omniauth"
 gem 'omniauth-facebook'
+gem "paperclip", "~> 4.2"
+gem "rails_best_practices"
+
 
 
 # bundle exec rake doc:rails generates the API under doc/api.

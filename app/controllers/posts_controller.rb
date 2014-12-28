@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:welcome]
 	
-
-
 	def welcome
 		@disable_logout = true
 	end
@@ -16,9 +14,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post=Post.new(post_params);
-		@post.submitted_by = current_user.email
-
+		@post = current_user.posts.build(post_params)
 		@post.save
 		redirect_to root_path
 	end
@@ -39,11 +35,7 @@ class PostsController < ApplicationController
 		unless !authorized_user
 			@post.update(post_params)
 		end
-		
-		
 		redirect_to root_path
-
-
 	end
 
 	def destroy
@@ -57,7 +49,6 @@ class PostsController < ApplicationController
 	def profile
 	end
 
-
 	private
 
 	def post_params
@@ -65,10 +56,6 @@ class PostsController < ApplicationController
 	end
 
 	def authorized_user
-		current_user.email == @post.submitted_by
+		current_user== @post.user
 	end
-
-
-
-
 end

@@ -1,9 +1,10 @@
 <% @posts.each do |post| %>
 	<div id="post">
-		<%= post.submitted_by %>
+		<%= image_tag post.user.image_string %>
+		<%= post.user.email %>
 		<%= post.course_name %>
 		<%= post.course_number %>
-		<% if current_user.email == post.submitted_by %>
+		<% if  post.user == current_user%>
 			<%= link_to "Edit", edit_post_path(post) %>
 			<%= link_to "Delete", post_path(post), method: :DELETE, data: { confirm: 'Are you sure?' }  %>
 		<% end %>

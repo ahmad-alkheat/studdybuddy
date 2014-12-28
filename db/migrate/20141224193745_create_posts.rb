@@ -3,7 +3,6 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :course_name
       t.integer :course_number
-
       t.timestamps null: false
     end
   end

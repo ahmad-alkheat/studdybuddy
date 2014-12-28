@@ -6,9 +6,13 @@ Rails.application.routes.draw do
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
   resources :posts
+
+  resources :users
+
   authenticated :user do
     root "posts#index", as: :authenticated_root
   end
+
   root "posts#welcome"
 
   # The priority is based upon order of creation: first created -> highest priority.

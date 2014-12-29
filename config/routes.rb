@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   get 'posts/profile'
 
+  get "profiles/:id" => "users#show", :as => 'profiles'
+
   devise_for :users, controllers:{
     registrations: "users/registrations",
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
   resources :posts
+
   
   authenticated :user do
     root "posts#index", as: :authenticated_root

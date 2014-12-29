@@ -49,6 +49,8 @@ class PostsController < ApplicationController
 	def profile
 	end
 
+
+
 	private
 
 	def post_params

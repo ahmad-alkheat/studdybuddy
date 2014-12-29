@@ -1,9 +1,10 @@
 <% @posts.each do |post| %>
 	<div id="post">
-		<%= post.user.name%> is looking for a study partner for
+		<%= post.user_name%> is looking for a study partner for
 		<%= post.course_name %>
 		<%= post.course_number %>
-		<%= image_tag post.user.image_string %>
+		<%= image_tag post.user_image_string %>
+		<%= link_to "view user", profiles_path(post.user_id) %>
 		<% if  post.user == current_user%>
 			<%= link_to "Edit", edit_post_path(post) %>
 			<%= link_to "Delete", post_path(post), method: :DELETE, data: { confirm: 'Are you sure?' }  %>

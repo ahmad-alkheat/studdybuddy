@@ -27,6 +27,8 @@ gem "omniauth"
 gem 'omniauth-facebook'
 gem "paperclip", "~> 4.2"
 gem "rails_best_practices"
+gem 'unicorn'
+gem 'searchkick'
 
 
 

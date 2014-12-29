@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 	end
 
 	def index
-		@posts=Post.all.order(:id)
+		@posts=Post.all.order('id DESC')
 	end
 
 	def new 

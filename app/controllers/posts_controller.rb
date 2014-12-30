@@ -1,5 +1,12 @@
 class PostsController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:welcome]
+
+	def search
+		if params[:search].present?
+			@posts = Post.search(params[:search])
+		end
+	end
+
 	
 	def welcome
 		@disable_logout = true

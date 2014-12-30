@@ -3,11 +3,15 @@ Rails.application.routes.draw do
 
   get "profiles/:id" => "users#show", :as => 'profiles'
 
-  devise_for :users, controllers:{
-    registrations: "users/registrations",
+  devise_for :users,  controllers:{
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
-  resources :posts
+
+  resources :posts do
+    collection do
+      get 'search'
+    end
+  end
 
   
   authenticated :user do

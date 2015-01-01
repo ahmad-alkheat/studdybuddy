@@ -1,9 +1,22 @@
+<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+<%= link_to 'Edit my account', edit_user_registration_path %>
 <%= form_tag search_posts_path, method: :get do %>
 <%= text_field_tag :search, params[:search] %>
 <%= submit_tag "Search", name: nil %>
 <% end %>
 
-<%= render 'post' %>
+<b> Study requests </b>
 
+<%= form_for(@post, remote: true) do |f| %>
+	
+		<%=f.label :Course_name %>
+		<%=f.select :course_name, options_for_select(course_names) %><br/>
 
-<%= link_to "profile", '/posts/profile' %>
+		<%=f.label :Course_number %>
+		<%=f.select :course_number, options_for_select(course_numbers) %> <br/>
+
+		<%=f.submit %>
+<% end %>
+<div id="container">
+<%= render @posts %>
+</div>

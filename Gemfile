@@ -25,10 +25,11 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise'
 gem "omniauth"
 gem 'omniauth-facebook'
-gem "paperclip", "~> 4.2"
 gem "rails_best_practices"
 gem 'unicorn'
 gem 'searchkick'
+gem "paperclip", "~> 4.2"
+
 
 
 

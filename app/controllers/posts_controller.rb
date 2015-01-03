@@ -19,7 +19,6 @@ class PostsController < ApplicationController
 
 		@post.save
 		respond_to do |format|
-			UserMailer.welcome_email(@post.user).deliver
 			format.html { redirect_to @post, notice: "Study request successfully added" }
 			format.js {}
 			format.json { render json: @post, status: :created, location: @post }

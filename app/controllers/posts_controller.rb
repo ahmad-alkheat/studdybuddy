@@ -5,7 +5,6 @@ class PostsController < ApplicationController
 		@posts = Post.search(params[:search])
 	end
 
-	
 	def welcome
 		@disable_logout = true
 	end

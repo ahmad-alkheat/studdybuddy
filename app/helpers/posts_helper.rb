@@ -16,11 +16,12 @@ module PostsHelper
 	end
 
 	def show_image(user)
-  		if user.image_string?
-  			user.image_string
 
-  		else if user.avatar?
+		if user.avatar?
   			user.avatar.url(:thumb)
+
+  		else if user.image_string?
+  			user.image_string
   			
   		else if user.gender == "MALE"
   			"missing.png"

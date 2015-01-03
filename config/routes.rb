@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "profiles/:id" => "users#show", :as => 'profiles'
 
   devise_for :users,  controllers:{
+    :registrations => "users/registrations",
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
 

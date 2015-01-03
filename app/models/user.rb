@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
- has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+ has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 	has_many :posts,  dependent: :destroy
@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     		user.email = auth.info.email
     		user.password = Devise.friendly_token[0,20]
     		user.name = auth.info.name 
-        user.image_string = auth.info.image 
+        user.attachment = auth.info.image 
   		end
 	end
   

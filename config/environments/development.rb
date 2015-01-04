@@ -14,7 +14,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
 
-
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['photosstuddybuddy'],
+      :access_key_id => ENV['AKIAI4P6D5W2IYBVDLSQ'],
+      :secret_access_key => ENV['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']
+    }
+  }
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false

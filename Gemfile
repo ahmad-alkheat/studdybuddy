@@ -29,7 +29,9 @@ gem 'omniauth-facebook'
 gem "rails_best_practices"
 gem 'unicorn'
 gem 'searchkick'
+gem 'aws-sdk'
 gem "paperclip", "~> 4.2"
+
 
 
 

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   get "profiles/:id" => "users#show", :as => 'profiles'
-  get "send_email/:id" => "users#send_email", :as => 'send_email'
+  get "email_form/:id" => "users#email_form", :as => 'email_form'
+  post "send_email/:id" => "users#send_email", :as => 'send_email'
 
   devise_for :users,  controllers:{
     :registrations => "users/registrations",

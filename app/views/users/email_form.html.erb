@@ -1,0 +1,10 @@
+<%= form_for :send_email, :url => send_email_path, :html => {:method => :post} do |f| %>
+	<%= f.label :Your_email %>
+	<%= f.email_field :your_email %>
+
+	<%= f.label :Content %>
+	<%= f.text_area :content %>
+
+	<%= f.submit "Send email" %>
+
+<% end %>

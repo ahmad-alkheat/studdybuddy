@@ -4,7 +4,7 @@
 	<%= post.course_number %>
 	<%= link_to image_tag(show_image(post.user)), profiles_path(post.user_id)  %>
 	<% unless current_user == post.user %>
-		<%= link_to "Send Email", send_email_path(post.user) %>
+		<%= link_to "Send Email", email_form_path(post.user_id) %>
 		<%end%>
 	<% if  post.user == current_user%><br/>
 		<%= link_to "Edit", edit_post_path(post) %>

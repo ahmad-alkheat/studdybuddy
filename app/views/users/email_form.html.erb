@@ -1,9 +1,9 @@
 <%= form_for :send_email, :url => send_email_path, :html => {:method => :post} do |f| %>
 	<%= f.label :Your_email %>
-	<%= f.email_field :your_email %>
+	<%= f.email_field :your_email, value: current_user.email%>
 
 	<%= f.label :Content %>
-	<%= f.text_area :content %>
+	<%= f.text_area :content, value: "Hi, I saw you post on StuddyBuddy and I would like to study together for that course" %>
 
 	<%= f.submit "Send email" %>
 

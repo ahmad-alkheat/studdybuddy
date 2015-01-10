@@ -19,7 +19,7 @@ Rails.application.configure do
     :s3_credentials => {
       :bucket => ENV['photosstuddybuddy'],
       :access_key_id => 'AKIAIX6ADUDYGHWN75DQ' ,
-      :secret_access_key => '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' 
+      :secret_access_key => 'B9oyaJPGPSHekTR5oJjH0JFaJLNRyPdXm8GGpmV9H' 
     }
   }
   # Show full error reports and disable caching.

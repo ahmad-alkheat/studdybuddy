@@ -23,8 +23,8 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['photosstuddybuddy'],
-      :access_key_id => ENV['AKIAI4P6D5W2IYBVDLSQ'],
-      :secret_access_key => ENV['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']
+      :access_key_id => 'AKIAIX6ADUDYGHWN75DQ',
+      :secret_access_key => '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' 
     }
   }
   # Disable Rails's static asset server (Apache or NGINX will already do this).

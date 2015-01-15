@@ -56,10 +56,10 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:course_name, :course_number, :submitted_by)
+		params.require(:post).permit(:course_name, :course_number)
 	end
 
 	def authorized_user
-		current_user== @post.user
+		current_user == @post.user
 	end
 end

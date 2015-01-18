@@ -1,4 +1,13 @@
-<%= image_tag('logo.png', class: 'image') %> <br/>
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %><br/>
-<%= link_to "Sign up quickly",  new_user_registration_path %><br/>
-<%= link_to "Already signed up? Just sign in then",  new_user_session_path %>
+<div id='logo' >
+  <%= image_tag('logo.png', class: 'image') %> <br/>
+</div>
+<div id='description'>
+	<p><h1> Welcome to StuddyBuddy </h1></p>
+	<p><h2> This website was created to make it easier for Queen's students to find studying partners for any course offered at Queen's university. </h2></p>
+	<div id='buttons'>
+		<%= button_to "Sign up quickly",  new_user_registration_path, class: "btn btn-primary btn-lg btn-block", :method => :get %><br/>
+		<%= button_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook),class: "btn btn-primary btn-lg btn-block"  %><br/>
+		<%= button_to "Already signed up? Just sign in then",  new_user_session_path, class: "btn btn-primary btn-lg btn-block", :method => :get %>
+	</div>
+</div>
+

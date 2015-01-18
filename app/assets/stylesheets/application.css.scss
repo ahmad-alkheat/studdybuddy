@@ -1,0 +1,36 @@
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+	background: image-url('stucco.png');
+}
+
+#post{
+	width:200px;
+	border-radius: 3px 3px;
+	margin-top: 5px;
+	padding:4px;
+}
+
+#logo {
+	margin: 0px auto;
+	text-align: center
+}
+ #description {
+ 	font-family: 'Alegreya', serif;
+ 	color:#444;
+ 	border: 1px solid #FFB6C1;
+ 	border-radius: 10px 10px;
+ 	height : 500px;
+ 	background : #FFFAF0;
+ 	margin-left: 10px;
+ 	margin-right: 10px;
+ 	text-align: center;
+ 	padding: 15px;
+
+ }

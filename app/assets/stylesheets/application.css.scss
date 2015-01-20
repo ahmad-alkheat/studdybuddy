@@ -6,32 +6,36 @@ margin: 0;
 padding: 0;
 }
 
-body {
-	background: image-url('stucco.png');
+.image {
+	width : 100%;
 }
 
-#post{
-	width:200px;
-	border-radius: 3px 3px;
-	margin-top: 5px;
-	padding:4px;
+.signup, .signin {
+width :390px;
+height:107px;
+background: #EB6553;
+border: 1px solid #979797;
+border-radius: 5px;
+/* Sign up : */
+font-family: LucidaGrande-Bold;
+font-size: 40px;
+color: #000000;
+line-height: 47px;
 }
 
-#logo {
-	margin: 0px auto;
-	text-align: center
+.signup {
+	position:absolute;
+	top :1082px;
+	left: 500px;
 }
- #description {
- 	font-family: 'Alegreya', serif;
- 	color:#444;
- 	border: 1px solid #FFB6C1;
- 	border-radius: 10px 10px;
- 	height : 500px;
- 	background : #FFFAF0;
- 	margin-top: 40px;
- 	margin-left: 10px;
- 	margin-right: 10px;
- 	text-align: center;
- 	padding: 15px;
 
- }
+.signin {
+	position:absolute;
+	top :1082px;
+	right: 500px;
+}
+
+
+
+
+

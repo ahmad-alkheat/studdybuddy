@@ -3,10 +3,8 @@
 		
 	<div id='buttons'>
 		<%= button_to "Sign up",  new_user_registration_path, :method => :get, class: 'signup'%><br/>
-		<%= button_to "Log in",  new_user_session_path, class: 'signin', :method => :get %>
-	</div>
-	
 		<%= button_to "Sign in with facebook", user_omniauth_authorize_path(:facebook), class: 'facebook' %><br/>
+		<%= button_to "Log in",  new_user_session_path, class: 'signin', :method => :get %>
 	</div>
 </div>
 

@@ -1,7 +1,46 @@
 <div id='container'>
-	<%= image_tag('Group.jpg', class: 'image') %> <br/>
-	<%= button_to "Sign up",  new_user_registration_path, :method => :get, class: 'signup'%><br/>
-	<%= button_to "Log in",  new_user_session_path, class: 'signin', :method => :get %>
-	<%= button_to "Sign in with facebook", user_omniauth_authorize_path(:facebook), class: 'facebook' %><br/>
+	<div id='logobar'>
+		<%= image_tag('logo.png', class: 'logo') %> <br/>
+	</div>
+	<%= image_tag('students.jpg', class: 'image') %> <br/>
+
+	<div id='welcome'>
+		Welcome to studdybuddy
+	</div>
+
+	<div id='find'>
+		Find studying partners for all offered courses at Queen's university
+	</div>
 </div>
+<div class='container'>
+	<div class='row'>
+
+		<div class='col-md-3 col-md-offset-2'>
+			<%= button_to "Sign up",  new_user_registration_path, :method => :get, class: 'signup'%><br/>
+		</div>
+		<div class='col-md-3 col-md-offset-2'>
+			<%= button_to "Log in",  new_user_session_path, class: 'signin', :method => :get %>
+		</div>
+	</div>
+</div>
+
+<div id='usage'>
+	<h2>StuddyBuddy is free and easy to use.</h2><br/>
+	<p>Simply browse studying requests from other students and email them if you are interested.</p><br/>
+	<p>Can't find a relevant course? Post a new studying request!</p>
+</div>
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-4 col-md-offset-4'>
+			<%= button_to "Sign in with facebook", user_omniauth_authorize_path(:facebook), class: 'facebook' %>	
+		</div>
+	</div>
+</div>
+
+
+<div id='footer'>
+	&copy Ahmad Al-kheat
+</div>
+
+
 

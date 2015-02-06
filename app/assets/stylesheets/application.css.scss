@@ -1,57 +1,122 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// CSS reset
 * {
 margin: 0;
 padding: 0;
 }
-
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 .image {
-	width : 100%;
+	width:100%;
+	opacity: 0.3;
 }
 
 #container {
 	position :relative;
 }
+
+#logobar {
+	opacity: 0.70;
+	height:auto;
+	background: #D8D8D8;
+	width:100%;
+}
+
+.logo {
+	width: 9%;
+	height: auto;
+	display:block;
+	margin:auto;
+
+}
+
+#welcome {
+	position: absolute;
+	top:15%;
+	width:75%;
+	height:auto;
+	left: 0;
+    right: 0;
+    margin: 0 auto;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+	font-size: 250%;
+	color: #000000;
+	line-height: 74px;
+}
+#find {
+	position: absolute;
+	width:75%;
+	height:auto;
+	text-align: center;
+	top:70%;
+	left: 0;
+    right: 0;
+    margin: 0 auto;
+	font-family: 'Dosis', sans-serif;
+	font-size: 150%;
+	color: #000000;
+}
+
+.row {
+	margin-top: 20px;
+}
+
 .signup, .signin {
-cursor:pointer;
-width :15%;
-height:7%;
-background: #EB6553;
-border: 1px solid #979797;
-border-radius: 5px;
-/* Sign up : */
-font-family: AmericanTypewriter;
-font-size: 2em;
-color: #000000;
+	cursor:pointer;
+	background: #EB6553;
+	border: 1% solid #979797;
+	width :100%;
+	height:70px;
+	border-radius: 5%;
+	font-family: 'Dosis', sans-serif;
+	font-size: 2em;
+	color: #000000;
 }
 
-.signup {
-	position:absolute;
-	top :58%;
-	left: 30%
+#usage {
+	width:100%;
+	height:300px;
+	opacity: 0.66;
+	background: #D8D8D8;
+	border: 1px solid;
+	margin:auto;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
 }
 
-.signin {
-	position:absolute;
-	top : 58%;
-	right: 30%;
+#usage h2 {
+	font-size: 2em;
+	margin-top: 40px;
+}
+
+#usage p {
+	font-size: 1.8em;
 }
 
 .facebook {
-position:absolute;
-top: 85.5%;
-left:40%;
-cursor:pointer;
-width: 22%;
-height:5.5%;
-background: #415E9B;
-border: 1px solid #979797;
-border-radius: 5px;
-/* Sign in with faceboo: */
-font-family: AmericanTypewriter;
-font-size: 1.5em;
-color: #FFFFFF;
+	cursor:pointer;
+	width: 100%;
+	height:60px;
+	background: #415E9B;
+	border: 1% solid #979797;
+	border-radius: 5px;
+	font-family: AmericanTypewriter;
+	font-size: 1.5em;
+	color: #FFFFFF;
 }
 
+#footer {
+	text-align: center;
+	line-height: 70px;
+	height: 70px;
+	width: 100%;
+	background:#D8D8D8;
+	margin-top: 20px;
+	border: 1px solid;
+
+}
 
 

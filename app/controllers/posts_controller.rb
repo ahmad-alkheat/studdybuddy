@@ -33,11 +33,10 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
-		@post=Post.find(params[:id])
+		@post = Post.find(params[:id])
 		unless !authorized_user
 			@post.destroy
 		end
-		redirect_to root_path
 	end
 
 	def search

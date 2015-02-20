@@ -1,10 +1,25 @@
-<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
-<%= link_to 'Edit my account', edit_user_registration_path,  class: 'btn btn-primary' %><br/>
-<%= link_to 'New Post', new_post_path, remote: true ,  class: 'btn btn-success' %>
-<%= form_tag search_posts_path, method: :get do %>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search", name: nil %>
-<% end %>
+
+  <div class='row'>
+    <div class='col-md-1'>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+    </div>
+    <div class='col-md-1'>
+      <%= link_to 'Edit my account', edit_user_registration_path,  class: 'btn btn-primary' %><br/>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-3'>
+      <%= form_tag search_posts_path, class: "form-inline", method: :get do %>
+      <%= text_field_tag :search, params[:search], class: "form-control"%>
+      <%= submit_tag "Search", name: nil %>
+      <% end %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-1'>
+     <%= link_to 'New Post', new_post_path, remote: true ,  class: 'btn btn-success' %><br/>
+    </div>
+  </div>
 
 <b> Study requests </b>
 

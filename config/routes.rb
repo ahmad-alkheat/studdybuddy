@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
 
-  resources :posts, except: [:new] do
+  resources :posts do
     collection do
       get 'search'
     end

@@ -1,10 +1,10 @@
-<%= form_for @post do |f| %>
-	
-		<%=f.label :Course_name %>
-		<%=f.select :course_name, options_for_select(course_names) %><br/>
+<%= form_for(@post, remote: true) do |f| %>
+  
+    <%=f.label :Course_name %>
+    <%=f.select :course_name, options_for_select(course_names) %><br/>
 
-		<%=f.label :Course_number %>
-		<%=f.select :course_number, options_for_select(course_numbers) %> <br/>
+    <%=f.label :Course_number %>
+    <%=f.select :course_number, options_for_select(course_numbers) %> <br/>
 
-		<%=f.submit %>
+    <%=f.submit %>
 <% end %>

@@ -1,28 +1,17 @@
 class PostsController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:welcome]
-
-	def search
-		@posts = Post.search(params[:search])
-	end
-
-	def welcome
-		@disable_logout = true
-	end
+	respond_to :html, :js
 
 	def index
 		@posts = Post.paginate(:page => params[:page], :per_page => 10).order('id DESC')
+	end
+
+	def new
 		@post = Post.new
 	end
 
 	def create
-		@post = current_user.posts.build(post_params)
-
-		@post.save
-		respond_to do |format|
-			format.html { redirect_to @post, notice: "Study request successfully added" }
-			format.js {}
-			format.json { render json: @post, status: :created, location: @post }
-		end
+		@post = current_user.posts.create(post_params)
 	end
 
 	def show
@@ -50,6 +39,14 @@ class PostsController < ApplicationController
 			@post.destroy
 		end
 		redirect_to root_path
+	end
+
+	def search
+		@posts = Post.search(params[:search])
+	end
+
+	def welcome
+		@disable_logout = true
 	end
 
 

@@ -15,22 +15,21 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post=Post.find(params[:id])
+		@post = Post.find(params[:id])
 	end
 
 	def edit
-		@post=Post.find(params[:id])
+		@post = Post.find(params[:id])
 		unless authorized_user
 			raise "error"
 		end
 	end
 
 	def update
-		@post=Post.find(params[:id])
+		@post = Post.find(params[:id])
 		unless !authorized_user
 			@post.update(post_params)
 		end
-		redirect_to root_path
 	end
 
 	def destroy

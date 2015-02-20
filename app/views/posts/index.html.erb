@@ -1,6 +1,6 @@
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<%= link_to 'Edit my account', edit_user_registration_path %><br/>
-<%= link_to 'New Post', new_post_path, remote: true %>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+<%= link_to 'Edit my account', edit_user_registration_path,  class: 'btn btn-primary' %><br/>
+<%= link_to 'New Post', new_post_path, remote: true ,  class: 'btn btn-success' %>
 <%= form_tag search_posts_path, method: :get do %>
 <%= text_field_tag :search, params[:search] %>
 <%= submit_tag "Search", name: nil %>

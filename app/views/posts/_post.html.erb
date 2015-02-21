@@ -2,7 +2,7 @@
 	<%= post.user_name%> is looking for a study partner for course
 	<%= post.course_name %>
 	<%= post.course_number %>
-	<%= link_to image_tag(show_image(post.user)), profiles_path(post.user_id)  %>
+	<%= image_tag(show_image(post.user)) %>
 	<% unless current_user == post.user %>
 		<%= link_to "Send Email", email_form_path(post.user_id) %>
 		<%end%>

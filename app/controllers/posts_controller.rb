@@ -14,10 +14,6 @@ class PostsController < ApplicationController
 		@post = current_user.posts.create(post_params)
 	end
 
-	def show
-		@post = Post.find(params[:id])
-	end
-
 	def edit
 		@post = Post.find(params[:id])
 		unless authorized_user

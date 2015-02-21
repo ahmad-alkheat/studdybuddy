@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get "profiles/:id" => "users#show", :as => 'profiles'
   get "email_form/:id" => "users#email_form", :as => 'email_form'
   post "send_email/:id" => "users#send_email", :as => 'send_email'
 
@@ -9,7 +8,7 @@ Rails.application.routes.draw do
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
 
-  resources :posts do
+  resources :posts, except: [:show] do
     collection do
       get 'search'
     end

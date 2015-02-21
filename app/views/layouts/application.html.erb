@@ -8,7 +8,10 @@
 <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	
-    <%= yield %>
+  <% if flash[:notice] -%>
+    <p class='notice'><%=h flash[:notice] %></p>
+  <% end -%>
+  	
+  <%= yield %>
 </body>
 </html>

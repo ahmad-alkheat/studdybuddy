@@ -60,11 +60,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 #login {
 	position:absolute;
-	top: 90%;
+	top: 60%;
 	left:30%;
-	display:block;
 	height:60px;
-	width:200px;
+	width:15%;
+	display:block;
+	max-width: 100%;
 	border: 2px solid;
 	border-color: #FF4681;
 	font-size: 30px;
@@ -75,11 +76,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 #signup{
 	position:absolute;
-	top: 90%;
+	top: 60%;
 	right:30%;
-	display:block;
 	height:60px;
-	width:200px;
+	width:15%;
+	display:block;
+	max-width: 100%;
 	border: 2px solid;
 	border-color: #FF4681;
 	font-size: 30px;

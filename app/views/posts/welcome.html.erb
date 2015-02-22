@@ -7,14 +7,13 @@
 	<div id='intro'>
 		<h2> Studdybuddy will help you find studying partners for a specific course </h2>
 	</div>
-</div>
+  <div id='signup'>
+    <%= link_to "Sign up",  new_user_registration_path , style: "display:block;height:100%;width:100%;color:#FF4681; text-decoration:none;"%><br/>
+  </div>
 
-<div id='signup'>
-<%= link_to "Sign up",  new_user_registration_path , style: "display:block;height:100%;width:100%;color:#FF4681; text-decoration:none;"%><br/>
-</div>
-
-<div id='login'>
-<%= link_to "Log in",  new_user_session_path, style: "display:block;height:100%;width:100%;color:#FF4681; text-decoration:none;"%>
+  <div id='login'>
+    <%= link_to "Log in",  new_user_session_path, style: "display:block;height:100%;width:100%;color:#FF4681; text-decoration:none;"%>
+  </div>
 </div>
 
 <div id='footer'>

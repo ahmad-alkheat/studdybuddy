@@ -1,8 +1,5 @@
 <div id='container'>
-	<div id='logobar'>
-		<%= image_tag('logo.png', class: 'logo') %> 
-		<%= link_to "Facebook Sign In", user_omniauth_authorize_path(:facebook), class: 'facebook', style: " text-decoration:none" %>
-	</div>
+	<%= render 'logo' %>
 	<%= image_tag('students.jpg', class: 'image') %> <br/>
 	<div id='intro'>
 		<h2> Studdybuddy will help you find studying partners for a specific course </h2>

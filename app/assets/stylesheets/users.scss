@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.simple_form{
+.simple_form {
 	max-width: 450px;
 	background: #FAFAFA;
 	padding: 30px;
@@ -21,37 +21,68 @@
     clear: both;
     /* Required for Webkit, but not for Gecko */
   }
+
   #links {
   	margin-top: 50px;
+  	font-family: 'Roboto Condensed', sans-serif;
+  	text-align: center;
   }
-  label {
-    float: left;
-    width: 100px;
+
+  h1 {
+  	font-family: 'Roboto Condensed', sans-serif;
+  	text-align: center;
+  	font-size: 40px;
+  	color: #B1CFDF;;
+  }
+  input[type=checkbox] {
+  	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 5px;
+  }
+
+  div.boolean label {
+  	display: block;
     text-align: center;
-    margin: 2px 10px;
-    font-size: 20px;
+
+  } 
+
+  
+  input[type='password'], input[type='email'],input[type='text'],  select  {
+  	height:50px;
+  	width:50%;
+  	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  	border: 1px solid;
+  	border-color: #B1CFDF;
+  	font-size: 20px;
+  	font-family: 'Roboto Condensed', sans-serif;
+  	text-align: center;
   }
   
-  input[type='password'], input[type='email']  {
-  	height:20px;
-  	width:50%;
-  	border: 1px solid;
-  	border-radius: 3px;
-  	border-color: #B1CFDF
-  }
+  
+
    input[type='submit'] {
    	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
 	box-shadow: inset 0px 1px 0px 0px #3985B1;
 	background-color: #216288;
 	border: 1px solid #17445E;
-	margin:0 auto;
-	display: inline-block;
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
 	cursor: pointer;
 	color: #FFFFFF;
 	padding: 8px 18px;
+	width:50%;
+	height:50px;
 	text-decoration: none;
-	font: 12px Arial, Helvetica, sans-serif;
+	font: 20px Arial, Helvetica, sans-serif;
    }
+   
+
+   
 
 }

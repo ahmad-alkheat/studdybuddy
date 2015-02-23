@@ -1,3 +1,61 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.simple_form{
+	max-width: 450px;
+	background: #FAFAFA;
+	padding: 30px;
+	margin: 50px auto;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #305A72;
+}
+
+
+
+
+.simple_form {
+  div.input {
+    margin-bottom: 20px;
+    clear: both;
+    /* Required for Webkit, but not for Gecko */
+  }
+  #links {
+  	margin-top: 50px;
+  }
+  label {
+    float: left;
+    width: 100px;
+    text-align: center;
+    margin: 2px 10px;
+    font-size: 20px;
+  }
+  input[type='email'] {
+  	height:20px;
+  	width:50%;
+  	border: 1px solid;
+  	border-radius: 3px;
+  }
+  input[type='password'] {
+  	height:20px;
+  	width:50%;
+  	border: 1px solid;
+  	border-radius: 3px;
+  }
+   input[type='submit'] {
+   	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	box-shadow: inset 0px 1px 0px 0px #3985B1;
+	background-color: #216288;
+	border: 1px solid #17445E;
+	margin:0 auto;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	font: 12px Arial, Helvetica, sans-serif;
+   }
+
+}

@@ -1,5 +1,7 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+/*
+ *= require users.scss
+*/
+
 @import 'animate';
 
 // CSS reset
@@ -20,9 +22,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 #logobar {
 	height:auto;
-    line-height: auto;
 	background: #2A3743;
 	width:100%;
+	line-height: auto;
 	text-align: center;
 	display: inline-block;
 }
@@ -36,8 +38,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 .facebook {
-	position: absolute;
-	right: 10%;
+	position:absolute;
+	right:10%;
+	top:1.5%;
 	color:white;
 
 }
@@ -48,7 +51,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	left:1%;
 	width:600px;
 	height:300px;
-	border-color: #415E9B;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 #intro h2 {

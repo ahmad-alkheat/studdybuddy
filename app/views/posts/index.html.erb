@@ -1,32 +1,22 @@
-
-  <div class='row'>
-    <div class='col-md-1'>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
-    </div>
-    <div class='col-md-1'>
-      <%= link_to 'Edit my account', edit_user_registration_path,  class: 'btn btn-primary' %><br/>
-    </div>
+<body class='index'>
+  <div id='container'>
+    <%= render 'logo' %>
   </div>
-  <div class='row'>
-    <div class='col-md-3'>
-      <%= form_tag search_posts_path, class: "form-inline", method: :get do %>
-      <%= text_field_tag :search, params[:search], class: "form-control"%>
-      <%= submit_tag "Search", name: nil %>
-      <% end %>
-    </div>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <%= link_to 'Edit my account', edit_user_registration_path%>
+  <%= form_tag search_posts_path, method: :get do %>
+    <%= text_field_tag :search, params[:search]%>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+  <%= link_to 'New Post', new_post_path, remote: true %>
+
+  <b> Study requests </b>
+
+  <div id="post-form" style="display:none;"></div>
+
+  <%= will_paginate @posts %>
+
+  <div class="container1">
+  	<%= render @posts %>
   </div>
-  <div class='row'>
-    <div class='col-md-1'>
-     <%= link_to 'New Post', new_post_path, remote: true ,  class: 'btn btn-success' %><br/>
-    </div>
-  </div>
-
-<b> Study requests </b>
-
-<div id="post-form" style="display:none;"></div>
-
-<%= will_paginate @posts %>
-
-<div class="container1">
-	<%= render @posts %>
-</div>
+</body>

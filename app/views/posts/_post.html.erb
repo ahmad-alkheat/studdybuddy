@@ -2,12 +2,15 @@
 	<%= post.user_name%> is looking for a study partner for course
 	<%= post.course_name %>
 	<%= post.course_number %>
-	<%= image_tag(show_image(post.user)) %>
+	<div id='options'>
+		<% if  post.user == current_user%>
+			<%= link_to "", edit_post_path(post), remote: true, class: "fa fa-pencil-square-o"%>
+			<%= link_to "", post_path(post), method: :DELETE, data: { confirm: 'Are you sure?' }, remote: true , class: "fa fa-times" %>
+		<% end%>
+	</div>
+	<br/>
+	<%= image_tag(show_image(post.user), class: 'image1') %>
 	<% unless current_user == post.user %>
-		<%= link_to "Send Email", email_form_path(post.user_id) %>
+		<%= link_to "Send Email", email_form_path(post.user_id), class: 'send-email' %>
 		<%end%>
-	<% if  post.user == current_user%><br/>
-		<%= link_to "Edit", edit_post_path(post), remote: true %>
-		<%= link_to "Delete", post_path(post), method: :DELETE, data: { confirm: 'Are you sure?' }, remote: true  %>
-	<% end%>
 </div>

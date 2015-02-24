@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
   has_attached_file :avatar,
-  :styles => { :medium => "300x300>", :thumb => "100x100>" },
+  :styles => { :medium => "300x300>", :thumb => "160x160>" },
   :storage => :s3,
   :bucket => 'photosstuddybuddy'
 

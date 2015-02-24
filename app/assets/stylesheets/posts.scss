@@ -1,0 +1,50 @@
+.container1 
+{
+	width: 30%;
+	margin:0 auto;
+}
+
+body.index {
+	background-color: #e9f0f5;
+}
+
+.post {
+	position: relative;
+	border-color: transparent;
+    border-right-color: white;	
+    width:100%;
+    height:auto;
+    border-radius: 4px;
+	margin-top: 10px;
+	font-family: "Droid Serif", serif;
+	font-size: 16px;
+	color: #7f8c97;
+	background: white;
+	box-shadow: 0 3px 0 #d7e4ed;
+	padding: 10px;
+	text-align: left;
+}
+
+.image1 {
+	border-radius: 50%;
+	max-width: 130px;
+	min-height: 130px;
+}
+
+.fa-pencil-square-o, .fa-times, .send-email {
+	text-decoration:none;
+	color: #7f8c97;
+}
+
+#options {
+	position: absolute;
+	right: 1%;
+
+}
+
+.send-email {
+	position: absolute;
+	right:1%;
+	bottom: 5%;
+}
+ 

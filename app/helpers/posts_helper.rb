@@ -18,7 +18,7 @@ module PostsHelper
 	def show_image(user)
 
 		if user.avatar?
-  			user.avatar.url(:thumb)
+  			user.avatar.url(:medium)
 
   		else if user.image_string?
   			user.image_string

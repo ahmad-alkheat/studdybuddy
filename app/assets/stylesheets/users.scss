@@ -55,16 +55,14 @@
   	display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   	border: 1px solid;
   	border-color: #B1CFDF;
   	font-size: 15px;
   	font-family: 'Roboto Condensed', sans-serif;
   	text-align: center;
   }
-  
-  
-
+ 
    input[type='submit'] {
    	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
@@ -82,6 +80,12 @@
 	text-decoration: none;
 	font: 20px Arial, Helvetica, sans-serif;
    }
+
+   input[type="submit"]:hover{
+     background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	 background-color: #28739E;
+   }
+
    
 
    

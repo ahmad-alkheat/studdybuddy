@@ -3,7 +3,7 @@
   <div class="form-inputs">
     <h1> Log In </h1>
     <%= f.input :email, required: false, autofocus: true, placeholder: "Your Email", label: false %>
-    <%= f.input :password, required: false, placeholder: "Your amazing password", label: false %>
+    <%= f.input :password, required: false, placeholder: "Your password", label: false %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
     <%= f.button :submit, "Log in", class: 'form-actions' %><br/>

@@ -4,7 +4,7 @@ module PostsHelper
 	end		
 
 	def course_numbers
-		(1..500).to_a
+		(100..500).to_a
 	end
 
 	def gender

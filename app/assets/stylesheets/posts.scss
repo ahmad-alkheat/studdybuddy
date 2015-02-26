@@ -40,7 +40,9 @@ body.index {
 	min-width: 20%;
 	min-height: 50px;
 	max-height: 100px;
-	float:left;
+	display:block;
+	margin: 0 auto;
+	
 }
 
 .fa-pencil-square-o, .fa-times, .send-email {

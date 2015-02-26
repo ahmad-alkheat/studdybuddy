@@ -3,6 +3,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= image_tag(show_image(current_user), class: 'image-edit') %>
     <%= f.input :avatar, as: :file, label: false %>
     <%= f.input :email, label: false %>
     <%= f.input :name, label: false %>

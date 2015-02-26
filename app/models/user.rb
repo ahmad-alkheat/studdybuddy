@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
   validates :name, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@queensu\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX, message: "Not a valid Queen's Email"}, unless: -> { from_omniauth? }
   has_attached_file :avatar,
   :styles => { :medium => "300x300>", :thumb => "160x160>" },
   :storage => :s3,
@@ -21,4 +23,9 @@ class User < ActiveRecord::Base
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable, :omniauth_providers => [:facebook]
+
+  def from_omniauth?
+    provider && uid
+  end
+
 end

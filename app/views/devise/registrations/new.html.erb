@@ -4,7 +4,7 @@
 
   <div class="form-inputs">
     <h1>Sign up</h1>
-    <%= f.input :email, required: true, placeholder: "Your Email", label: false%>
+    <%= f.input :email, required: true, placeholder: "Your Queen's email", label: false%>
     <%= f.input :name, required: true, placeholder: "firstName lastName", label: false %>
     <%= f.input :department, collection: department, label: false  %>
     <%=f.input :gender, collection: gender, label: false%>
@@ -13,6 +13,6 @@
     <%= f.button :submit, "Sign up" %>
 
   </div>
-  </div>
+</div>
 <% end %>
 

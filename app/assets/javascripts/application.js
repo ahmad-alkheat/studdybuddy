@@ -20,3 +20,9 @@
 $(document).ready(function() {
   $('#intro').addClass('animated fadeInUp');
 });
+
+$(function() {
+  setTimeout(function(){
+    $('#notice').slideUp(500);
+  }, 1000);
+});

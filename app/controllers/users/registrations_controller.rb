@@ -53,10 +53,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   #def after_sign_up_path_for(resource)
-  #  '/posts/profile'
-  # end
+  #  '/users/sign_in'
+   #end
 
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+   def after_inactive_sign_up_path_for(resource)
+     new_user_session_path
+   end
 end

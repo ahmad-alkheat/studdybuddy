@@ -20,5 +20,5 @@ class User < ActiveRecord::Base
 	end
   
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :confirmable, :omniauth_providers => [:facebook]
 end

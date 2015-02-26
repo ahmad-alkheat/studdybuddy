@@ -24,5 +24,5 @@ $(document).ready(function() {
 $(function() {
   setTimeout(function(){
     $('#notice').slideUp(500);
-  }, 1000);
+  }, 2500);
 });

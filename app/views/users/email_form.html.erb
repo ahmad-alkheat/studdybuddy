@@ -1,9 +1,8 @@
-<%= form_for :send_email, :url => send_email_path, :html => {:method => :post} do |f| %>
-	<%= f.label :Your_email %>
-	<%= f.email_field :your_email, value: current_user.email%>
+<%= render 'posts/logo' %>
+<%= simple_form_for :send_email, :url => send_email_path, :html => {:method => :post} do |f| %>
+	<%= f.input :your_email, :input_html => { :value => current_user.email }%><br/>
 
-	<%= f.label :Content %>
-	<%= f.text_area :content, value: "Hi, I saw your post on StuddyBuddy and I would like to study together for that course" %>
+	<%= f.input :content, as: :text, :input_html => { :value => 'Hi, I saw your post on StuddyBuddy and I would like to study with you'} %><br/>
 
 	<%= f.submit "Send email" %>
 

@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module StuddyBuddy
   class Application < Rails::Application
+    routes.default_url_options[:host] = 'localhost:3000'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

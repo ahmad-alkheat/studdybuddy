@@ -1,1 +1,2 @@
 Studdybuddy is a very simple idea to connect students together. Feel free to fork it and refactor code, add tests, comments, anything helps. 
+http://www.studdybuddy.ca/
